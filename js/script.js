@@ -102,13 +102,13 @@ var calculateAge = ()=>{
   let age_days = document.querySelector('#meInTheWorld .days');
   let age_hours = document.querySelector('#meInTheWorld .hours');
   let age_minutes = document.querySelector('#meInTheWorld .minutes');
-  let birth_date = new Date('Oct, 27, 1999');
+  let birth_date = new Date('Oct, 27, 1998');
   let years,months,days, hours, minutes;
   setInterval(function(){
     var current_date = new Date();
-    AGE = current_date.getYear() - birth_date.getYear();
+    AGE = current_date.getYear() - birth_date.getYear()-1;
     age_year.innerHTML = pad(AGE);
-    age_months.innerHTML = pad(Math.abs((current_date.getMonth()) - birth_date.getMonth())-2);
+    age_months.innerHTML = pad(Math.abs((current_date.getMonth()) - birth_date.getMonth()));
     age_days.innerHTML = pad(Math.abs(current_date.getDate() - birth_date.getDate()));
     age_hours.innerHTML = pad(Math.abs(current_date.getHours() - birth_date.getHours()));
     age_minutes.innerHTML = pad(Math.abs(current_date.getMinutes() - birth_date.getMinutes()));
